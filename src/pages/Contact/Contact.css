@@ -70,10 +70,16 @@
   }
   
   .social-links .icon {
+    font-size: 1.6em;
     margin-right: 10px;
-    color: #ff9800;
+    color: #00ff99;
   }
   
+  .social-links a{
+    color: white;
+    text-decoration: none;
+  }
+
   .social-links p {
     display: flex;
     align-items: center;

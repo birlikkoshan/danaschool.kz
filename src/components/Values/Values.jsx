@@ -1,11 +1,11 @@
 import React from 'react';
 import './Values.css';
-
+import team from './img/team.jpg'
 const values = [
   { title: 'Уважение', icon: '/icons/respect.png' },
   { title: 'Уверенность в себе', icon: '/icons/confidence.png' },
   { title: 'Ответственность', icon: '/icons/responsibility.png' },
-  { title: 'Командная работа', icon: '/icons/teamwork.png' },
+  { title: 'Командная работа', icon: team },
   { title: 'Саморазвитие', icon: '/icons/growth.png' },
   { title: 'Дисциплина', icon: '/icons/discipline.png' },
 ];
@@ -17,7 +17,7 @@ const SchoolValues = () => {
       <div className="values-grid">
         {values.map((val, index) => (
           <div key={index} className="value-card">
-            <img src={val.icon} alt={val.title} className="value-icon" />
+            {/* <img src={val.icon} alt={val.title} className="value-icon" /> */}
             <h3>{val.title}</h3>
           </div>
         ))}

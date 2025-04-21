@@ -5,6 +5,8 @@ import SchoolMotto from './../../components/SchoolMotto/SchoolMotto'
 import ScrollToTopButton from './../../components/Btns/UpBtn/ScrollToTopButton'
 import SchoolMission from './../../components/SchoolMission/SchoolMission'
 import Values from './../../components/Values/Values'
+
+import './About.css'
 // import Slides from '../../components/SlideShow/Slides'
 // import SuccsesSteps from './../../components/SuccessSteps/SuccessSteps';
 // import Gallery from './../../components/Gallery/Gallery';
@@ -27,6 +29,9 @@ import Values from './../../components/Values/Values'
 // const imageUrls = [img1, img2, img3];
 // const galUrls = [gal1, gal2, gal3, gal4, gal5,gal6, gal7];
 // , gal8, gal9
+
+
+import { translations } from './locales';
 export const AboutPage = () => {
     const [lang, setLang] = useState('kz');
 
@@ -45,13 +50,22 @@ export const AboutPage = () => {
 
     return <div>
         <Header />
+        <div className='about-container'>
+            <div className='about-content'>
+                <h1 className="about-title">{translations[lang]?.title}</h1> 
+                <p className="about-intro">{translations[lang]?.subtitle}</p> 
+                <p className="about-description"> {translations[lang]?.q1} <strong>{translations[lang]?.q2}</strong> {translations[lang]?.q3}</p> 
+                <p className="about-description"> {translations[lang]?.q5}</p> 
+            </div>
+        </div>
         <History lang={lang}/>
         <SchoolMotto lang={lang}/>
         <SchoolMission lang={lang}/>
         <Values lang={lang}/>
         <ScrollToTopButton/>
-        {/* <Slides pageCount={3} imageUrls={imageUrls} lang={lang}/>
-        <SuccsesSteps lang={lang}/>
-        <Gallery imgUrls={galUrls}/> */}
+        <footer className="form-footer">
+            <p>© {new Date().getFullYear()} Dana School. Все права защищены.</p>
+        </footer>
+        
     </div>
 }

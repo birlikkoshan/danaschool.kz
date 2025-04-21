@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {createBrowserRouter, RouterProvider } from 'react-router-dom';
-import {MainPage, AboutPage, DocumentsPage, ErrPage, AdmissionPage, GraduatesPage, ContactPage} from './pages'
+import {MainPage, AboutPage, DocumentsPage, ErrPage, AdmissionPage, GraduatesPage, ContactPage, AnimatedFormPage} from './pages'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +31,9 @@ const router = createBrowserRouter([
   {
     path: '/graduates',
     element: <GraduatesPage />
+  },{
+    path: '/create-application',
+    element: <AnimatedFormPage />
   }
 ]);
 

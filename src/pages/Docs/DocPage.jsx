@@ -4,49 +4,50 @@ import Header from '../../components/Header/Header';
 import ScrollToTopButton from './../../components/Btns/UpBtn/ScrollToTopButton'
 
 const documents = [
-  {
-    title: 'Аттестация / Аттестация',
-    url: '/docs/attestation.pdf',
-  },
+  // {
+  //   title: 'Аттестация / Аттестация',
+  //   url: '/docs/attestation.pdf',
+  // },
   {
     title: 'Академическая честность / Академиялық адалдық',
-    url: '/docs/academic-honesty.pdf',
+    url: '/docs/от 23.01.2025 политика_академической_честности.docx',
   },
   {
     title: 'Политика поступления в школу / Мектепке қабылдау саясаты',
-    url: '/docs/admission-policy.pdf',
+    url: '/docs/от 21.01.2025 Политика поступления в школу.docx',
   },
   {
     title: 'Политика школьной формы и внешнего вида учащегося / Оқушының мектеп формасы мен сыртқы келбеті саясаты',
-    url: '/docs/uniform-policy.pdf',
+    url: '/docs/Политика формы и внешнего вида учащихся.docx',
   },
   {
     title: 'Политика безопасности / Қауіпсіздік саясаты',
-    url: '/docs/safety-policy.pdf',
+    url: '/docs/Политика безопасности.docx',
   },
-  {
-    title: 'Дисциплинарная политика / Тәртіптік саясат',
-    url: '/docs/discipline-policy.pdf',
-  },
+  // {
+  //   title: 'Дисциплинарная политика / Тәртіптік саясат',
+  //   url: '/docs/discipline-policy.pdf',
+  // },
   {
     title: 'Политика о потерянных вещах / Жоғалған заттар саясаты',
-    url: '/docs/lost-and-found.pdf',
+    url: '/docs/Политика о потерянных вещах.docx',
   },
-  {
-    title: 'Политика взаимодействия с родителями / Ата-анамен қарым-қатынас саясаты',
-    url: '/docs/parent-interaction.pdf',
-  },
-  {
-    title: 'Положение о пропускном режиме / Өткізу режимі туралы ереже',
-    url: '/docs/access-policy.pdf',
-  },
+  // {
+  //   title: 'Политика взаимодействия с родителями / Ата-анамен қарым-қатынас саясаты',
+  //   url: '/docs/parent-interaction.pdf',
+  // },
+  // {
+  //   title: 'Положение о пропускном режиме / Өткізу режимі туралы ереже',
+  //   url: '/docs/access-policy.pdf',
+  // },
   {
     title: 'Политика в отношении домашних заданий / Үй тапсырмасына қатысты саясат',
-    url: '/docs/homework-policy.pdf',
+    url: '/docs/от 23.01.25 Политика в отношении домашних заданий.docx',
   },
   {
     title: 'Антибуллинг / Антибуллинг',
-    url: '/docs/anti-bullying.pdf',
+    url: '/docs/Антибуллинг.docx',
+    // url: '%PUBLIC_URL%/docs/anti-bullying.pdf',
   },
   {
     title: 'Правила внутреннего распорядка / Ішкі тәртіп ережелері',
@@ -54,7 +55,7 @@ const documents = [
   },
   {
     title: 'Основы охраны здоровья / Денсаулық сақтау негіздері',
-    url: '/docs/health-safety.pdf',
+    url: '/docs/healthoh.docx',
   },
 ];
 
@@ -79,6 +80,9 @@ export const DocumentsPage = () => {
       </div>
     </section>
     <ScrollToTopButton/>
+    <footer className="form-footer">
+          <p>© {new Date().getFullYear()} Dana School. Все права защищены.</p>
+        </footer>
     </>
   );
 };

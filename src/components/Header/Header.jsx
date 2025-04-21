@@ -4,7 +4,7 @@ import { translations } from './locales';
 import './style.css';
 import Logo from '../ImageContainers/Logo';
 import logo from './img/logo.png';
-import logo2 from './img/hsc.jpg';
+import logo2 from './img/hsc.png';
 import instagram from './img/instagram.png'
 import whatsapp from './img/whatsapp.png'
 
@@ -35,12 +35,14 @@ const Header = () => {
       </div>
       <div></div>
       <div className="logo-pc">Dana school</div>
+      {/* <div className="logo-pc">        {t.title}      </div> */}
+        
         <div className="social-icons">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/dana_school_almaty?igsh=MTJxMXAzcHJjMWNyMA== " target="_blank" rel="noopener noreferrer">
             <Logo url={instagram}/>
           {/* <img src="/icons/instagram.svg" alt="Instagram" /> */}
           </a>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/+77003700333" target="_blank" rel="noopener noreferrer">
             <Logo url={whatsapp}/>
           </a>
         </div>

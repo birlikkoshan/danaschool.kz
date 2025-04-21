@@ -1,0 +1,18 @@
+.form-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #203a43;
+    color: #fff;
+    font-size: 14px;
+    margin-top: -20px;
+    border-top: 3px solid #2c5364;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @media (max-width: 600px) {
+    .form-footer {
+      font-size: 12px;
+      padding: 15px 10px;
+    }
+  }
+  

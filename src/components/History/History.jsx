@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import './style.css';
-
-const events = [
-  { year: '2009', text: 'Открыли детский сад на 50 детей' },
-  { year: '2012', text: 'Открыли начальную школу для 1 класса' },
-  { year: '2014', text: 'Построили здание начальной школы' },
-  { year: '2020', text: 'Построили здание средней школы' },
-  { year: '2022', text: 'Построили здание старшей школы' },
-];
+import { translations } from './locales';
 
 const SchoolTimeline = (props) => {
     const {lang} = props
+    const events = [
+      { year: '2009', text: translations[lang]?.q1 },
+      { year: '2012', text: translations[lang]?.q2},
+      { year: '2014', text: translations[lang]?.q3 },
+      { year: '2020', text: translations[lang]?.q4 },
+      { year: '2022', text: translations[lang]?.q5 },
+    ];
   return (
     <div className="timeline-wrapper">
       <motion.h2 
@@ -21,7 +21,7 @@ const SchoolTimeline = (props) => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        История школы
+        {translations[lang]?.title}
       </motion.h2>
 
       <div className="timeline-container">

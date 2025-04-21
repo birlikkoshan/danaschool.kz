@@ -1,19 +1,19 @@
 import React from 'react';
 import './SchoolMission.css';
-
+import { translations } from './locales';
 const SchoolMission = (props) => {
     const {lang} = props
   return (
     <section className="mission-section">
       <div className="mission-content">
-        <h2 className="mission-title">Миссия школы</h2>
+        <h2 className="mission-title">{translations[lang]?.title}</h2>
         <p className="mission-text">
-          Прививать ценность обучения в каждом ученике и готовить будущих лидеров общества
+        {translations[lang]?.q1}
         </p>
 
-        <h2 className="mission-title">Наше видение</h2>
+        <h2 className="mission-title">{translations[lang]?.title1} </h2>
         <p className="mission-text">
-            Школа "ДАНА" является ролевой моделью для школ в Алматинской области в воспитании и обучении конкурентноспособного поколения выпускников
+        {translations[lang]?.q2}
         </p>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import './AdmissionPage.css';
 import Header from '../../components/Header/Header';
-
+import Btn from './../../components/Btns/SendForm/btn'
 export const AdmissionPage = () => {
   return (<>
     <Header/>
@@ -59,6 +59,11 @@ export const AdmissionPage = () => {
         </div>
       </div>
     </div>
+    <Btn left={24} text="Список документов"/>
+    <Btn right={24} text="Заполнить регистрационную форму" url='/create-application'/>
+    <footer className="form-footer">
+          <p>© {new Date().getFullYear()} Dana School. Все права защищены.</p>
+        </footer>
     </>
   );
 };

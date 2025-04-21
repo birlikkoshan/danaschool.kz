@@ -2,11 +2,33 @@ import React from "react";
 import "./Graduates.css";
 import Header from '../../components/Header/Header';
 import ScrollToTopButton from './../../components/Btns/UpBtn/ScrollToTopButton'
+import kbtu from './imgs/kbtu.jpg'
+import iitu from './imgs/IITU.jpg'
+import kimep from './imgs/kimep.jpg'
+import osu from './imgs/Oregon_state.jpg'
+import casino from './imgs/casino.jpg'
+import almaU from './imgs/almaU.jpg'
+import narxoz from './imgs/narxoz.png'
+import kau from './imgs/kau.jpg'
+import avia from './imgs/avia.jpg'
+import ciu from './imgs/ciu.jpg'
+import niu from './imgs/NIU vshe.jpg'
+
+import kazgasa from './imgs/kazgasa.jpg'
+import kazgiu from './imgs/kazgiu.jpeg'
+import krmu from './imgs/krmu.jpg'
+import satbayev from './imgs/satbayev.jpg'
+import uib from './imgs/uib.jpeg'
+import turan from './imgs/turan.jpeg'
+import uas from './imgs/uas.jpg'
+
+
+
 
 const universities = [
   {
     name: "Казахстанско-Британский технический университет",
-    image: "/img/kbtu.jpg",
+    image: kbtu,
     graduates: [
       "Аргимбаева Александра — Автоматизация и управление",
       "Асылбек Мухамедали — Электротехника и автоматизация",
@@ -16,22 +38,22 @@ const universities = [
   },
   {
     name: "Университет КИМЭП",
-    image: "/img/kimep.jpg",
+    image: kimep,
     graduates: ["Аязбай Фаиза — Bang college of Business, Corporate finance"],
   },
   {
     name: "Oregon State University",
-    image: "/img/oregon.jpg",
+    image: osu,
     graduates: ["Бурханов Марат"],
   },
   {
     name: "University of Cassino (Италия)",
-    image: "/img/cassino.jpg",
+    image: casino,
     graduates: ["Валеев Ануар"],
   },
   {
     name: "AlmaU – Алматы Менеджмент Университет",
-    image: "/img/almau.jpg",
+    image: almaU,
     graduates: [
       "Изатов Бейбарс — Менеджмент",
       "Толеген Амина — Маркетинг и реклама",
@@ -41,12 +63,12 @@ const universities = [
   },
   {
     name: "NARXOZ University",
-    image: "/img/narxoz.jpg",
+    image: narxoz,
     graduates: ["Кажмукан Тамерлан — Информационные технологии"],
   },
   {
     name: "Международный университет информационных технологии",
-    image: "/img/iitu.jpg",
+    image: iitu,
     graduates: [
       "Макушев Кирилл — Кибербезопасность",
       "Вайгандт Богдан — Кибербезопасность",
@@ -55,37 +77,37 @@ const universities = [
   },
   {
     name: "Казахстанско-американский университет",
-    image: "/img/kau.jpg",
+    image: kau,
     graduates: ["Суренин Андрей — Туризм"],
   },
   {
     name: "Академия Гражданской Авиации",
-    image: "/img/aviation.jpg",
+    image: avia,
     graduates: ["Артеменко Дмитрий — Пилот"],
   },
   {
     name: "Cyprus International University",
-    image: "/img/cyprus.jpg",
+    image: ciu,
     graduates: ["Конкашов Алихан — Бизнес администрирование"],
   },
   {
     name: "Национальный исследовательский университет ВШЭ",
-    image: "/img/hse.jpg",
+    image: niu,
     graduates: ["Котов Даниил — Информационная безопасность"],
   },
   {
     name: "КазГАСА",
-    image: "/img/kazgasa.jpg",
+    image: kazgasa,
     graduates: ["Пак Таисия — Графический дизайн"],
   },
   {
     name: "КазНУ им. Аль-Фараби",
-    image: "/img/kaznu.jpg",
+    image: kazgiu,
     graduates: ["Пилипенко Эвелина — Генетика"],
   },
   {
     name: "Казахстанско-Российский медицинский университет",
-    image: "/img/kazrusmed.jpg",
+    image: krmu,
     graduates: [
       "Сейт Данияр — Стоматология",
       "Ягмур Хамид — Общая медицина",
@@ -93,7 +115,7 @@ const universities = [
   },
   {
     name: "Satbayev University",
-    image: "/img/satbayev.jpg",
+    image: satbayev,
     graduates: [
       "Спиридонов Илья — Автоматизация и управление",
       "Цыганков Валерий — Транспортная техника и технологии",
@@ -101,17 +123,17 @@ const universities = [
   },
   {
     name: "UIB – Университет Международного Бизнеса",
-    image: "/img/uib.jpg",
+    image: uib,
     graduates: ["Темиржанова Карина — Финансы, экономика, банковское дело и страховое дело"],
   },
   {
     name: "Университет \"Туран\"",
-    image: "/img/turan.jpg",
+    image: turan,
     graduates: ["Тлеу Руслан — Ресторанное дело и гостиничный бизнес"],
   },
   {
     name: "University of Applied Sciences",
-    image: "/img/uas.jpg",
+    image: uas,
     graduates: ["Хакимова Элина — Foundation"],
   },
 ];
@@ -135,6 +157,9 @@ export const GraduatesPage = () => {
       </div>
     </div>
     <ScrollToTopButton />
+    <footer className="form-footer">
+          <p>© {new Date().getFullYear()} Dana School. Все права защищены.</p>
+        </footer>
     </>
   );
 }
