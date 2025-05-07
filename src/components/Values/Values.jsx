@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Values.css';
 import team from './img/team.jpg'
-const values = [
-  { title: 'Уважение', icon: '/icons/respect.png' },
-  { title: 'Уверенность в себе', icon: '/icons/confidence.png' },
-  { title: 'Ответственность', icon: '/icons/responsibility.png' },
-  { title: 'Командная работа', icon: team },
-  { title: 'Саморазвитие', icon: '/icons/growth.png' },
-  { title: 'Дисциплина', icon: '/icons/discipline.png' },
-];
+import {translate} from './locales'
+// const values = [ 'Уважение', 'Уверенность в себе', 'Ответственность', 'Командная работа', ".",'Дисциплина', 'Саморазвитие', "."]
 
-const SchoolValues = () => {
+
+
+const SchoolValues = (props) => {
+  const {lang} = props;
+  const values = translate[lang]?.qs;
+  const [st, setSt] = useState({display:`${ window.innerWidth < 756 ? 'none' : 'flex'}`, background: 'transparent', boxShadow: 'none', color: "transparent"})
+  useEffect(() => {
+    setSt({display:`${ window.innerWidth < 756 ? 'none' : 'flex'}`, background: 'transparent', boxShadow: 'none', color: "transparent"})
+  }, [window.innerWidth]);
+  const arrev = (val) => {
+    if(val == '.'){
+      return st
+    }
+  }
   return (
     <section className="values-section">
-      <h2 className="values-title">Наши ценности</h2>
+      <h2 className="values-title">{translate[lang]?.header}</h2>
       <div className="values-grid">
         {values.map((val, index) => (
-          <div key={index} className="value-card">
-            {/* <img src={val.icon} alt={val.title} className="value-icon" /> */}
-            <h3>{val.title}</h3>
+          
+          <div key={index} className='value-card' style={ arrev(val) }>
+            <h3>{val}</h3>
           </div>
         ))}
       </div>

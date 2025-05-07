@@ -4,7 +4,10 @@
     height: 90vh;
     overflow: hidden;
   }
-  
+  .welcome-image{
+    max-height: 250px;
+    border-radius: 10px;
+  }
   .slide {
     position: absolute;
     top: 0;
@@ -17,18 +20,26 @@
     transition: opacity 1.5s ease-in-out;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
+  }
+
+  .slide-text{
+    background: linear-gradient(90deg, #203a43, #203a43, #ffffff00); ;
+    opacity: 1;
+    z-index: 100;
   }
   
   .slide.active {
     opacity: 1;
     z-index: 1;
+    overflow: hidden;
   }
   
   .overlay {
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.91);
+    background: rgba(0, 0, 0, 0.504);
     padding: 2rem;
     border-radius: 12px;
     animation: fadeInTextPc 1.2s ease-in-out;
@@ -48,11 +59,11 @@
   @keyframes fadeInTextPc{
     from {
       opacity: 0;
-      transform: translate(-80%, -40%);
+      transform: translate(-100%, -40%);
     }
     to {
         opacity: 1;
-        transform: translate(-80%, -50%);
+        transform: translate(-100%, -50%);
     }
   }
   
@@ -69,7 +80,7 @@
 
   @media (min-width: 1000px) {
     .static-text{
-        transform: translate(-80%, -50%);
+        transform: translate(-100%, -50%);
         line-height: 1.7;
         animation: fadeInTextPc 1.2s ease-in-out;
     }
@@ -77,6 +88,9 @@
 
   /* Адаптивность */
   @media (max-width: 1000px) {  
+    .slideshow {
+      height: 100vh;
+    }
     .overlay h1, .static-text h1 {
       font-size: 2rem;
     }
@@ -89,9 +103,29 @@
         line-height: 1.5;
         animation: fadeInTextPhone 1.2s ease-in-out;
     }
+    .slide{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    /* .slide-text{
+      background: transparent;
+    } */
+    .welcome-selection{
+      display: flex;
+      justify-content: center;
+    }
+    .welcome-image {
+      max-width: 270px;
+  
+      position: absolute;
+      right: 0;
+      overflow: hidden;
+    }
   }
 
   .static-text {
+    
     max-width: 700px;
     min-width: 350px;
     position: absolute;
@@ -102,7 +136,8 @@
     text-align: center;
     /* background: rgba(0, 0, 0, 0.793); */
     /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-    background: rgba(0, 0, 0, 0.752);
+    /* background: rgba(0, 0, 0, 0.504); */
+
     padding: 2rem;
     font-size: 1.1rem;
 

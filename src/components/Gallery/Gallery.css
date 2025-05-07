@@ -1,69 +1,103 @@
-.gallery-section {
-    padding: 3rem 1rem;
-    background: #0f2027;
-    color: white;
-    text-align: center;
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 98vh;
+  top: -20px;
+  overflow: hidden;
+  background: black;
+}
+
+.slider-slide {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.1s ease;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Анимация влево */
+/* Мягкое появление влево */
+.slide-left {
+  animation: slideLeft 0.6s ease forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(40%);
+    opacity: 0.3;
   }
-  
-  .gallery-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #fff;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    max-width: 1000px;
-    margin: 0 auto;
+}
+
+/* Мягкое появление вправо */
+.slide-right {
+  animation: slideRight 0.6s ease forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-40%);
+    opacity: 0.3;
   }
-  
-  .gallery-item {
-    overflow: hidden;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+}
+
+/* Стрелки */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 1s;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.left::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+/* Скрываем стрелки на мобилке */
+@media (max-width: 768px) {
+  .arrow {
+    display: none;
   }
-  
-  .gallery-item:hover img {
-    transform: scale(1.08);
-  }
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 32, 39, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  .modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    } to {
-      opacity: 1;
-    }
-  }
-  
+}

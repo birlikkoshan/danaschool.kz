@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './AnimatedForm.css';
-import Header from '../../components/Header/Header';
-
-export const AnimatedFormPage = () => {
+const AnimatedFormPage = ({func, trs}) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    p_name: '',
+    s_name: '',
+    date: '',
+    class: 0,
+    language: '',
+    phone: ''
   });
 
   useEffect(() => {
@@ -27,56 +28,97 @@ export const AnimatedFormPage = () => {
   };
 
   const handleClear = () => {
-    setFormData({ name: '', email: '', message: '' });
+    func();
+    setFormData({
+      p_name: '',
+      s_name: '',
+      date: '',
+      class: 0,
+      language: '',
+      phone: ''
+    });
     localStorage.removeItem('formData');
   };
 
-  return (<><Header/>
+  return (<>
     <div className="form-container">
       
       <form className="animated-form" onSubmit={(e) => e.preventDefault()}>
-        <h2>Оставьте свою заявку</h2>
-
+        <h2>{trs.modal.title}</h2>
+        
         <div className="input-group">
           <input
             type="text"
-            name="name"
-            value={formData.name}
+            name="p_name"
+            value={formData.p_name}
             onChange={handleChange}
             required
             placeholder=" "
           />
-          <label>Имя</label>
+          <label>{trs.modal.q1}</label>
         </div>
-
         <div className="input-group">
           <input
-            type="email"
-            name="email"
-            value={formData.email}
+            type="text"
+            name="s_name"
+            value={formData.s_name}
             onChange={handleChange}
             required
             placeholder=" "
           />
-          <label>Email</label>
+          <label>{trs.modal.q2}</label>
         </div>
-
         <div className="input-group">
-          <textarea
-            name="message"
-            value={formData.message}
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
             onChange={handleChange}
             required
             placeholder=" "
           />
-          <label>Сообщение</label>
+          <label>{trs.modal.q3}</label>
         </div>
-
+        <div className="input-group">
+          <input
+            type="number"
+            name="class"
+            value={formData.class}
+            onChange={handleChange}
+            required
+            placeholder=" "
+          />
+          <label>{trs.modal.q4}</label>
+        </div>
+        <div className="input-group">
+          <input
+            type="text"
+            name="language"
+            value={formData.language}
+            onChange={handleChange}
+            required
+            placeholder=" "
+          />
+          <label>{trs.modal.q5}</label>
+        </div>
+        <div className="input-group">
+          <input
+            type="text"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+            placeholder=" "
+          />
+          <label>{trs.modal.q6}</label>
+        </div>
         <div className="form-buttons">
-          <button type="button" className="btn save" onClick={handleSave}>Сохранить</button>
-          <button type="button" className="btn clear" onClick={handleClear}>Очистить</button>
+          <button type="button" className="btn save" onClick={handleSave}>{trs.modal.btn1}</button>
+          <button type="button" className="btn clear" onClick={handleClear}>{trs.modal.btn2}</button>
         </div>
       </form>
     </div></>
   );
 };
+
+export default AnimatedFormPage

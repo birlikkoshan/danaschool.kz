@@ -16,8 +16,8 @@ import gal4 from './gal/gal4.png';
 import gal5 from './gal/gal5.png';
 import gal6 from './gal/gal6.png';
 import gal7 from './gal/gal7.png';
-import gal8 from './gal/gal8.png';
-import gal9 from './gal/gal9.png';
+// import gal8 from './gal/gal8.png';
+// import gal9 from './gal/gal9.png';
 import gal10 from './gal/gal10.png';
 import gal11 from './gal/gal11.jpg';
 import gal12 from './gal/gal12.jpg';
@@ -26,9 +26,10 @@ import gal14 from './gal/gal14.jpg';
 // import gal8 from './img/gal8.png';
 // import gal9 from './img/gal9.png';
 
+// gal8,  gal9 
 
-const imageUrls = [img1, img2, img3];
-const galUrls = [gal1, gal2, gal3, gal4, gal5,gal6, gal7, gal8,  gal9 , gal10, gal11, gal12, gal13, gal14,];
+const imageUrls = [img1, img2, img3, gal10, gal11, gal12, gal13, gal14];
+const galUrls = [gal1, gal2, gal3, gal4, gal5,gal6, gal7, ];
 // , gal8, gal9
 export const MainPage = () => {
     const [lang, setLang] = useState('kz');

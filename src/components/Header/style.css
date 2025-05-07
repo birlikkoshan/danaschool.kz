@@ -6,7 +6,7 @@
   
   .main-header {
     /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
-    color: white;
+    color: #1E3A8A;
     padding: 1rem 2rem;
     display: flex;
     justify-content: end;
@@ -17,7 +17,7 @@
   .logo-pc{
     font-size: 2.5rem;
     display: flex;
-    color: white;
+    color: #1E3A8A;
     align-items: center;
     font-weight: bold;
     text-transform: uppercase;
@@ -27,7 +27,7 @@
 
  .logo {
     display: none;
-    color: white;
+    color: #1E3A8A;
     align-items: center;
     font-weight: bold;
     font-size: 1.8rem;
@@ -47,7 +47,7 @@
   }
   
   .nav a, .dropdown a {
-    color: white;
+    color: #1E3A8A;
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -63,12 +63,12 @@
     bottom: 0;
     height: 2px;
     width: 0%;
-    background-color: #00ff99;
+    background-color: 	#38BDF8;
     transition: width 0.3s ease;
   }
   
   .nav a:hover {
-    color: #00ffcc;
+    color: 	#38BDF8;
   }
   
   .nav a:hover::after {
@@ -168,7 +168,8 @@
   }
    
  header{
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: #E2E8F0;
+  /* linear-gradient(135deg, #2c5364, #203a43, #0f2027); */
 
  } 
 .top-bar {

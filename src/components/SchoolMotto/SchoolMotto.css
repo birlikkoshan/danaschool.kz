@@ -1,5 +1,5 @@
 .motto-section {
-    min-height: 100vh;
+    min-height: 60vh;
     background: linear-gradient(135deg, #e8f5e9, #dcedc8); /* светлый зелёный фон */
     display: flex;
     justify-content: center;

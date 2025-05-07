@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import {createBrowserRouter, RouterProvider } from 'react-router-dom';
-import {MainPage, AboutPage, DocumentsPage, ErrPage, AdmissionPage, GraduatesPage, ContactPage, AnimatedFormPage} from './pages'
-
+import {MainPage, AboutPage, DocumentsPage, ErrPage, AdmissionPage, GraduatesPage, ContactPage} from './pages'
+import image from './pages/Main/img/img1.png'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -31,14 +31,20 @@ const router = createBrowserRouter([
   {
     path: '/graduates',
     element: <GraduatesPage />
-  },{
-    path: '/create-application',
-    element: <AnimatedFormPage />
-  }
+  },
+  // {
+  //   path: '/create-application',
+  //   element: <AnimatedFormPage />
+  // }
 ]);
 
+
+
 function App() {
+
+
   return (
+
     <RouterProvider router={router}/>
     // <MainPage/>
   );

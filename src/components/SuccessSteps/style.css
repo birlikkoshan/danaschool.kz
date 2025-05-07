@@ -67,14 +67,14 @@
     }
   
     .step-card {
-      width: 90%;
+      width: 100%;
     }
     .success-section {
       height: auto;
     }
-    .step-card{
+    /* .step-card{
       width: 370px;
-    }
+    } */
   }
 
   
